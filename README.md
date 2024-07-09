@@ -107,11 +107,11 @@ mvn exec:java -e -D exec.mainClass=com.microsoft.playwright.CLI -D exec.args="co
    value in `extent.reporter.pdf.out`
 7. Screenshots and Trace files will be generated in target folder on failure this configuration is provided
    in `src/test/java/hooks/Hooks.java` in `takeScreenshotAndTrace` method.
-8. To change your username go to `src/test/resources/config/config.properties` and provide value against `adminUsername`
+8. To change your username go to `src/test/resources/config/config.properties` and provide value against `username`
 9. To change password, go to `src/main/java/utils/WebActions.java` in `encrypt()` and
    replace `yourPassword` with your password, execute the test case, Encrypted password will be printed on your
    console .
-   Copy Encrypted password in `src/test/resources/config/config.properties` against `adminPassword` field.
+   Copy Encrypted password in `src/test/resources/config/config.properties` against `password` field.
 10. You can even execute test cases by running `src/test/java/testrunner/TestRunner.java` file all the failed test cases
     are saved in `target/rerun.txt`
 11. For rerunning failed test cases run `src/test/java/testrunner/ReRunner.java`
