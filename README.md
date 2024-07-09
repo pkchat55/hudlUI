@@ -28,7 +28,7 @@
 
 ## About the Project
 
-Playwright Demo - This project is based on Microsoft Playwright which enables reliable end-to-end testing for modern web
+Playwright Selenium with JAVA - Hudl(Login scenario) - This project is based on Microsoft Playwright which enables reliable end-to-end testing for modern web
 apps.
 
 Top Features:
@@ -107,11 +107,11 @@ mvn exec:java -e -D exec.mainClass=com.microsoft.playwright.CLI -D exec.args="co
    value in `extent.reporter.pdf.out`
 7. Screenshots and Trace files will be generated in target folder on failure this configuration is provided
    in `src/test/java/hooks/Hooks.java` in `takeScreenshotAndTrace` method.
-8. To change your username go to `src/test/resources/config/config.properties` and provide value against `adminUsername`
+8. To change your username go to `src/test/resources/config/config.properties` and provide value against `username`
 9. To change password, go to `src/main/java/utils/WebActions.java` in `encrypt()` and
    replace `yourPassword` with your password, execute the test case, Encrypted password will be printed on your
    console .
-   Copy Encrypted password in `src/test/resources/config/config.properties` against `adminPassword` field.
+   Copy Encrypted password in `src/test/resources/config/config.properties` against `password` field.
 10. You can even execute test cases by running `src/test/java/testrunner/TestRunner.java` file all the failed test cases
     are saved in `target/rerun.txt`
 11. For rerunning failed test cases run `src/test/java/testrunner/ReRunner.java`
@@ -130,8 +130,11 @@ mvn exec:java -e -D exec.mainClass=com.microsoft.playwright.CLI -D exec.args="co
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
-[overall-report-screenshot]: ReadMeImages/OverallReport.PNG
+[overall-report-screenshot]: ![image (44)](https://github.com/pkchat55/hudlUI/assets/48479206/0406a038-1cae-4645-8d2e-2ed70360807e)
 
-[failure-report-screenshot]: ReadMeImages/FailureReport.PNG
 
-[pdf-report-screenshot]: ReadMeImages/PDFReport.PNG
+[failure-report-screenshot]: ![image (45)](https://github.com/pkchat55/hudlUI/assets/48479206/ae1d0523-71f6-4cac-87d4-1b1328a237bf)
+
+
+[pdf-report-screenshot]: ![image (42)](https://github.com/pkchat55/hudlUI/assets/48479206/8a0311ae-e950-4acf-a533-cbe6e61c9192)![image (43)](https://github.com/pkchat55/hudlUI/assets/48479206/339e7455-3954-4f79-9386-f128e76cf0b9)
+
