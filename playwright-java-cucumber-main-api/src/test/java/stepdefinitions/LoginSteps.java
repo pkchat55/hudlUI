@@ -38,8 +38,8 @@ public class LoginSteps {
         loginPage.clickHudl();
     }
 
-    @When("^user clicks on \"([^\"]*)\" icon in main page")
-    public void clickOnIcon(String iconName) {loginPage.clickOnIcon(iconName);}
+    @When("^user clicks on Hudl icon in main page")
+    public void clickOnIcon() {loginPage.clickOnIcon();}
 
     @Then("verify that user is navigated to main page for log in")
     public void verifyMainPage() {

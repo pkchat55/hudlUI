@@ -4,7 +4,7 @@ Feature: Login Page feature
   Scenario: Verify User is able to login to Hudl with correct credentials
     Given user navigates to "url"
     When user clicks Login button
-    And user clicks on "Hudl" icon in main page
+    And user clicks on Hudl icon in main page
     Then verify that user is navigated to main page for log in
     And user enters "username" username
     And user enters "password" password
@@ -16,7 +16,7 @@ Feature: Login Page feature
   Scenario: Verify User is not able to login to Hudl with invalid username
     Given user navigates to "url"
     When user clicks Login button
-    And user clicks on "Hudl" icon in main page
+    And user clicks on Hudl icon in main page
     Then verify that user is navigated to main page for log in
     And user enters "invalidUsername" username
     And user enters "password" password
@@ -26,7 +26,7 @@ Feature: Login Page feature
   Scenario: Verify User is not able to login to Hudl with invalid password
     Given user navigates to "url"
     When user clicks Login button
-    And user clicks on "Hudl" icon in main page
+    And user clicks on Hudl icon in main page
     Then verify that user is navigated to main page for log in
     And user enters "username" username
     And user enters "invalidPassword" password

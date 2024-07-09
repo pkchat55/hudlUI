@@ -16,6 +16,7 @@ public class LoginPage{
     private final Locator HUDL_OPTION;
     private final Locator PROFILE_ICON;
     private final Locator LOGOUT_BUTTON;
+    private final Locator HUDL_ICON;
 
     public LoginPage(Page page) {
         this.page = page;
@@ -25,6 +26,7 @@ public class LoginPage{
         this.HUDL_OPTION=page.getByText("Hudl");
         this.PROFILE_ICON=page.locator("div.hui-globalusermenu");
         this.LOGOUT_BUTTON=page.locator("span:has-text('Log Out')").first();
+        this.HUDL_ICON=page.locator("[data-qa-id='login-hudl']");
     }
 
     public void navigateToUrl(String url) {
@@ -53,8 +55,8 @@ public class LoginPage{
         newPage.waitForLoadState();
     }
 
-    public void clickOnIcon(String iconName) {
-        this.page.locator("[data-qa-id='login-hudl']").click();
+    public void clickOnIcon() {
+        this.HUDL_ICON.click();
     }
 
     public boolean verifyMainPage() {
