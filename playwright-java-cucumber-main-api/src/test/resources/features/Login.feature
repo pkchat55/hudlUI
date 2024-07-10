@@ -12,7 +12,7 @@ Feature: Login Page feature
     And verify that user is logged in and navigated to user Profile page
     And user clicks Logout button
 
-  @smoke @login @invalidUsername
+  @smoke @login @invalidUsername @errorText
   Scenario: Verify User is not able to login to Hudl with invalid username
     Given user navigates to "url"
     When user clicks Login button
@@ -23,7 +23,7 @@ Feature: Login Page feature
     And user clicks Continue button
     Then verify the error text for invalid credentials
 
-  @smoke @login @invalidPassword
+  @smoke @login @invalidPassword @errorText
   Scenario: Verify User is not able to login to Hudl with invalid password
     Given user navigates to "url"
     When user clicks Login button
@@ -34,7 +34,7 @@ Feature: Login Page feature
     And user clicks Continue button
     Then verify the error text for invalid credentials
 
-  @smoke @login @blankPassword
+  @smoke @login @blankPassword @errorText
   Scenario: Verify User is not able to login to Hudl with blank username
     Given user navigates to "url"
     When user clicks Login button
@@ -45,7 +45,7 @@ Feature: Login Page feature
     And user clicks Continue button
     Then verify the blank error text for credentials
 
-  @smoke @login @blankPassword
+  @smoke @login @blankPassword @errorText
   Scenario: Verify User is not able to login to Hudl with blank password
     Given user navigates to "url"
     When user clicks Login button
@@ -56,7 +56,7 @@ Feature: Login Page feature
     And user clicks Continue button
     Then verify the blank error text for credentials
 
-  @smoke @login @blankEmailAndPassword
+  @smoke @login @blankEmailAndPassword @errorText
   Scenario: Verify User is not able to login to Hudl with blank email and password
     Given user navigates to "url"
     When user clicks Login button
