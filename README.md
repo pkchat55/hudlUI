@@ -134,14 +134,5 @@ mvn exec:java -e -D exec.mainClass=com.microsoft.playwright.CLI -D exec.args="co
 
 [pdf-report-screenshot]: ![image (46)](https://github.com/pkchat55/hudlUI/assets/48479206/43d7bbf4-85f7-4d65-ba21-8365659b725a)![image (49)](https://github.com/pkchat55/hudlUI/assets/48479206/9b6a442a-45cd-4239-9e1b-d66b846b51ca)
 
-
-
-
-
-
-
 [failure-report-screenshot]: ![image (45)](https://github.com/pkchat55/hudlUI/assets/48479206/ae1d0523-71f6-4cac-87d4-1b1328a237bf)
-
-
-[pdf-report-screenshot]: ![image (42)](https://github.com/pkchat55/hudlUI/assets/48479206/8a0311ae-e950-4acf-a533-cbe6e61c9192)![image (43)](https://github.com/pkchat55/hudlUI/assets/48479206/339e7455-3954-4f79-9386-f128e76cf0b9)
 
