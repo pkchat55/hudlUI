@@ -53,4 +53,10 @@ public class LoginSteps {
 
     @When("^user clicks Logout button$")
     public void clickLoginout() {loginPage.clickLoginOut();}
+
+    @Then("verify the error text for invalid credentials")
+    public void verifyErrorTextForInvalidCredentials() {
+        Assert.assertEquals("Error message text does not match.",
+            loginPage.verifyErrorMessage(), "We don't recognize that email and/or password");
+    }
 }

@@ -21,6 +21,7 @@ Feature: Login Page feature
     And user enters "invalidUsername" username
     And user enters "password" password
     And user clicks Continue button
+    Then verify the error text for invalid credentials
 
   @smoke @login @invalidPassword
   Scenario: Verify User is not able to login to Hudl with invalid password
@@ -31,3 +32,4 @@ Feature: Login Page feature
     And user enters "username" username
     And user enters "invalidPassword" password
     And user clicks Continue button
+    Then verify the error text for invalid credentials

@@ -17,6 +17,7 @@ public class LoginPage{
     private final Locator PROFILE_ICON;
     private final Locator LOGOUT_BUTTON;
     private final Locator HUDL_ICON;
+    private final Locator ERROR_TEXT;
 
     public LoginPage(Page page) {
         this.page = page;
@@ -27,6 +28,7 @@ public class LoginPage{
         this.PROFILE_ICON=page.locator("div.hui-globalusermenu");
         this.LOGOUT_BUTTON=page.locator("span:has-text('Log Out')").first();
         this.HUDL_ICON=page.locator("[data-qa-id='login-hudl']");
+        this.ERROR_TEXT=page.getByText("We don't recognize that email and/or password");
     }
 
     public void navigateToUrl(String url) {
@@ -70,5 +72,10 @@ public class LoginPage{
     public void clickLoginOut() {
         PROFILE_ICON.hover();
         LOGOUT_BUTTON.click();
+    }
+
+    public String verifyErrorMessage() {
+        WebActions.waitUntilElementDisplayed(this.ERROR_TEXT, 60);
+        return this.ERROR_TEXT.textContent();
     }
 }
