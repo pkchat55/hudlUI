@@ -18,6 +18,7 @@ public class LoginPage{
     private final Locator LOGOUT_BUTTON;
     private final Locator HUDL_ICON;
     private final Locator ERROR_TEXT;
+    private final Locator BLANK_TEXT;
 
     public LoginPage(Page page) {
         this.page = page;
@@ -29,6 +30,7 @@ public class LoginPage{
         this.LOGOUT_BUTTON=page.locator("span:has-text('Log Out')").first();
         this.HUDL_ICON=page.locator("[data-qa-id='login-hudl']");
         this.ERROR_TEXT=page.getByText("We don't recognize that email and/or password");
+        this.BLANK_TEXT=page.getByText("Please fill in all of the required fields");
     }
 
     public void navigateToUrl(String url) {
@@ -77,5 +79,10 @@ public class LoginPage{
     public String verifyErrorMessage() {
         WebActions.waitUntilElementDisplayed(this.ERROR_TEXT, 60);
         return this.ERROR_TEXT.textContent();
+    }
+
+    public String verifyBlankErrorMessage() {
+        WebActions.waitUntilElementDisplayed(this.BLANK_TEXT, 60);
+        return this.BLANK_TEXT.textContent();
     }
 }

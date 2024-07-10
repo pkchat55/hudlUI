@@ -33,3 +33,36 @@ Feature: Login Page feature
     And user enters "invalidPassword" password
     And user clicks Continue button
     Then verify the error text for invalid credentials
+
+  @smoke @login @blankPassword
+  Scenario: Verify User is not able to login to Hudl with blank username
+    Given user navigates to "url"
+    When user clicks Login button
+    And user clicks on Hudl icon in main page
+    Then verify that user is navigated to main page for log in
+    And user enters "blankUsername" username
+    And user enters "password" password
+    And user clicks Continue button
+    Then verify the blank error text for credentials
+
+  @smoke @login @blankPassword
+  Scenario: Verify User is not able to login to Hudl with blank password
+    Given user navigates to "url"
+    When user clicks Login button
+    And user clicks on Hudl icon in main page
+    Then verify that user is navigated to main page for log in
+    And user enters "username" username
+    And user enters "blankPassword" password
+    And user clicks Continue button
+    Then verify the blank error text for credentials
+
+  @smoke @login @blankEmailAndPassword
+  Scenario: Verify User is not able to login to Hudl with blank email and password
+    Given user navigates to "url"
+    When user clicks Login button
+    And user clicks on Hudl icon in main page
+    Then verify that user is navigated to main page for log in
+    And user enters "blankUsername" username
+    And user enters "blankPassword" password
+    And user clicks Continue button
+    Then verify the blank error text for credentials

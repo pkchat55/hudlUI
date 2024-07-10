@@ -59,4 +59,10 @@ public class LoginSteps {
         Assert.assertEquals("Error message text does not match.",
             loginPage.verifyErrorMessage(), "We don't recognize that email and/or password");
     }
+
+    @Then("verify the blank error text for credentials")
+    public void verifyBlankErrorTextForEmailOrPassword() {
+        Assert.assertEquals("Error message text does not match.",
+            loginPage.verifyBlankErrorMessage(), "Please fill in all of the required fields");
+    }
 }
